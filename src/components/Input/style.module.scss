@@ -1,0 +1,36 @@
+.inputForm {
+  margin-top: 30px;
+  height: 60px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  input {
+    font-size: 24px;
+    width: 100%;
+    max-width: 740px;
+    background: #1f2a48;
+    border: none;
+    outline: none;
+    height: 100%;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 140px 10px 30px;
+  }
+
+  button {
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    background: #0378fb;
+    cursor: pointer;
+    right: 0;
+    margin-right: 15px;
+    color: white;
+  }
+}

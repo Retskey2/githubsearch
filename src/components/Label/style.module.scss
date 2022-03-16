@@ -1,0 +1,82 @@
+.label {
+  margin-top: 30px;
+  width: 100%;
+  min-height: 300px;
+  background: #1f2a48;
+  border-radius: 10px;
+  display: grid;
+  grid-template-areas:
+          'avatar static static';
+  color: white;
+  font-size: 24px;
+  padding: 20px 0;
+
+  @media screen and (max-width: 1200px) {
+    grid-template-areas:
+          'avatar'
+          'static';
+  }
+
+  .avatar {
+    grid-area: avatar;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    img {
+      width: 100px;
+      border-radius: 100%;
+    }
+  }
+
+  .info {
+    margin: 0 20px 0 20px;
+
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      letter-spacing: 1px;
+
+      span {
+        margin-left: 20px;
+        opacity: 0.6;
+        font-size: 18px;
+      }
+    }
+
+    a {
+      font-size: 20px;
+      outline: none;
+      text-decoration: none;
+      color: #0378fb;
+    }
+
+    .bio {
+      width: auto;
+      margin-top: 20px;
+      opacity: 0.6;
+      font-size: 18px;
+    }
+
+    .statistic {
+      grid-area: static;
+      width: auto;
+      height: auto;
+      padding: 5px 10px;
+      margin-top: 30px;
+      background: #141c2f;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}
