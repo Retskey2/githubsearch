@@ -8,6 +8,7 @@
   padding: 20px 0;
 
   .cards {
+    padding: 5px;
     display: grid;
     grid-template-areas:
           'avatar static static';
@@ -26,9 +27,9 @@
           grid-template-areas:
           "login login"
           "ref date" !important;
+          gap: 10px;
           grid-template-columns: 1fr 1.5fr;
-          gap: 2px;
-          
+
           .login {
             margin: 0 auto;
             font-size: 36px;
@@ -37,15 +38,17 @@
           .date {
             margin: 0 !important;
             text-align: center;
+            font-size: 18px !important;
           }
+
           .ref {
             text-align: center;
           }
         }
+
         .bio {
           text-align: center;
-          font-size: 26px !important;
-          margin-top: 5px !important;
+          margin-top: 8px !important;
         }
       }
 
@@ -99,7 +102,7 @@
         width: auto;
         margin-top: 20px;
         opacity: 0.6;
-        font-size: 18px;
+        font-size: 26px;
       }
 
       .statistic {
@@ -116,6 +119,7 @@
         justify-content: space-between;
 
         .column {
+          justify-content: space-between;
           display: flex;
           flex-direction: column;
           align-items: center;

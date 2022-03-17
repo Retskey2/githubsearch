@@ -1,6 +1,6 @@
 const defaultState = {
     isLoading: false,
-    user: {},
+    user: false,
 }
 
 const USERS = "GET_USER";

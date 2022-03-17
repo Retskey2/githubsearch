@@ -3,9 +3,7 @@ import styles from './style.module.scss'
 import {useSelector} from "react-redux";
 import Spinner from "../Spinner";
 
-function Label() {
-    const user = useSelector(state => state.main.user);
-    const isLoading = useSelector(state => state.main.isLoading);
+function Label({user, isLoading}) {
     const newDate = new Date(user.created_at);
     const options = {day: 'numeric', month: 'short', year: 'numeric'};
     return (
