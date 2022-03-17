@@ -1,9 +1,11 @@
-import {GetUserAction} from "../store/mainReducer";
+import {GetLoadingAction, GetUserAction} from "../store/mainReducer";
+import axios from "axios";
 
 export const fetchUser = user => {
     return dispatch => {
-        fetch(`https://api.github.com/users/${user}`)
-            .then(response => response.json())
-            .then(json => dispatch(GetUserAction(json)))
+        axios.get(`https://api.github.com/users/${user}`)
+            .then(response => {dispatch(GetUserAction(response.data))})
+            .catch(error => console.log(error))
+            .finally(() => dispatch(GetLoadingAction(false)));
     }
 }
